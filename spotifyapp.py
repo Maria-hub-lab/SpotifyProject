@@ -45,8 +45,6 @@ user = spotifyObject.current_user()
 displayName = user['display_name']
 follower = user['followers']['total']
 
-# BIS HIER FUNKTIONIERT
-
 # Loop that prints options how to use the script
 while True:
     print()
@@ -103,6 +101,11 @@ while True:
             
         # See album art
         while True:
+            # Search for song in trackResults
+            searchSong = input("Which song to you want to hear?: ")
+            if searchSong == "x":
+                break
+                        
             songSelection = input("Enter a song number to see the album art: ")
             if songSelection == "x":
                 break
